@@ -9,6 +9,10 @@ class NewApi extends StatefulWidget {
 class _NewApiState extends State<NewApi> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold();
+    return Scaffold(
+      appBar: AppBar(
+        title: Text("New      Pi"),
+      ),
+    );
   }
 }
