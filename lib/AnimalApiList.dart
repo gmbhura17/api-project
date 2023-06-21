@@ -21,10 +21,10 @@ class _AnimalApiListState extends State<AnimalApiList> {
     var response = await http.get(url);
     if(response.statusCode==200)
     {
-      var body = response.body.toString();
-      var json = jsonDecode(body);
-       return json;
-      print(body);
+        var body = response.body.toString();
+        var json = jsonDecode(body);
+         return json;
+        print(body);
     }
     else
     {

@@ -3,6 +3,10 @@ import 'package:apiproject/AnimalViewModule.dart';
 import 'package:apiproject/FakeApi.dart';
 import 'package:apiproject/HomePage.dart';
 import 'package:apiproject/LoginPageApi.dart';
+import 'package:apiproject/Prac.dart';
+import 'package:apiproject/Prac2.dart';
+import 'package:apiproject/ProductApi.dart';
+import 'package:apiproject/ProductPostApi.dart';
 import 'package:apiproject/SplashScreen.dart';
 import 'package:flutter/material.dart';
 
@@ -22,7 +26,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home:  FakeApi(),
+      home:  SplashScreen(),
     );
   }
 }

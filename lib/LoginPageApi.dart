@@ -1,6 +1,7 @@
 import 'dart:convert';
 
 import 'package:apiproject/HomePage.dart';
+import 'package:apiproject/SignIn.dart';
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:http/http.dart' as http;
@@ -20,8 +21,10 @@ class _LoginPageApiState extends State<LoginPageApi> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
+      
+      appBar: AppBar(  
         title: Text("Login Page Api's "),
+        
       ),
       body: SingleChildScrollView(
         child: Column(
@@ -179,17 +182,13 @@ class _LoginPageApiState extends State<LoginPageApi> {
                             timeInSecForIosWeb: 1,
                             backgroundColor: Colors.green,
                             textColor: Colors.white,
-                            fontSize: 16.0
+                            fontSize: 14.0
                         );
 
                         Navigator.of(context).pop();
                         Navigator.of(context).push(
                             MaterialPageRoute(builder: (context)=>HomePage())
                         );
-
-
-
-
                       }
                       else
                       {
@@ -207,7 +206,27 @@ class _LoginPageApiState extends State<LoginPageApi> {
                   },
                   child: Center(child: Text("LOGIN",style: TextStyle(fontSize: 20,color: Colors.black,fontWeight: FontWeight.bold),))
               ),
+            
             ),
+            Row(
+              children: [
+                Text("Click Here For Register",style: TextStyle(fontSize: 19),),
+                GestureDetector(
+                  onTap: (){
+                    Navigator.of(context).push(
+                        MaterialPageRoute(builder: (context)=>SignIn())
+                    );
+                  },
+                    child:
+                Text("Click",style: TextStyle(color: Colors.green,fontSize: 19),)
+                )
+              ],
+              
+              crossAxisAlignment: CrossAxisAlignment.center,
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            ),
+
+
           ]
         ),
       ),

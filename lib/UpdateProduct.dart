@@ -115,8 +115,6 @@ class _UpdateProductState extends State<UpdateProduct> {
          ),
          GestureDetector(
            onTap: () async{
-
-
              var name = _product.text.toString();
              var q = _quantity.text.toString();
              var p = _price.text.toString();
@@ -148,11 +146,6 @@ class _UpdateProductState extends State<UpdateProduct> {
                  print("Error");
                }
              }
-
-
-
-
-
            },
            child: Container(
              height: 50,
@@ -160,9 +153,7 @@ class _UpdateProductState extends State<UpdateProduct> {
              decoration: BoxDecoration(
                  color: Colors.blue, borderRadius: BorderRadius.circular(20)),
              child: Center(
-               child: Text(
-                 'Submit',
-                 style: TextStyle(color: Colors.white, fontSize: 25),
+               child: Text('Submit', style: TextStyle(color: Colors.white, fontSize: 25),
                ),
              ),
            ),
